@@ -1,0 +1,55 @@
+% Typesetting
+\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage{microtype}
+\usepackage[parfill]{parskip}
+\frenchspacing
+
+% Fonts
+\usepackage[T1]{fontenc}
+\usepackage[cal=rsfso,
+            scr=rsfs,
+            frak=euler, 
+            bb=libus,
+            scaled=0.95]{mathalpha}
+\usepackage[OT1, small, 
+            euler-hat-accent, 
+            euler-digits]{eulervm}
+\usepackage[mono=false]{libertine} 
+
+% Maths and Symbols
+\usepackage[fleqn, leqno]{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{thmtools}
+\usepackage{amssymb}
+\usepackage{stmaryrd}
+
+% Macros
+\usepackage{xparse}
+\usepackage{xspace}
+\usepackage{stackrel}
+\usepackage{scalerel}
+
+% Lists and Tables
+\usepackage[shortlabels]{enumitem}
+\usepackage{booktabs}
+\usepackage{diagbox}
+
+% Referencing
+\usepackage{hyperref}
+\usepackage[capitalise]{cleveref}
+\hypersetup{hypertexnames = false, bookmarksdepth = 2, bookmarksopen = true, colorlinks, linkcolor = black, citecolor = black, urlcolor = black, pdfstartview={XYZ null null 1}}
+
+% Citation 
+%\usepackage{harvard}
+\usepackage[backend=biber, maxbibnames=99, datamodel=mrnumber]{biblatex}
+
+% Graphics
+\usepackage{graphicx}
+\usepackage{tikz}
+\usepackage{tikz-cd}
+
+% Todos and Misc
+\usepackage[colorinlistoftodos, textsize = footnotesize]{todonotes}
+
+%\usepackage{gitinfo2}
