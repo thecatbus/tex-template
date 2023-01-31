@@ -35,14 +35,17 @@
 \usepackage{booktabs}
 \usepackage{diagbox}
 
+% Citation 
+\usepackage[backend=biber, 
+            style=authoryear-comp,
+            hyperref=auto, 
+            backref=true,
+            maxbibnames=99]{biblatex}
+
 % Referencing
 \usepackage{hyperref}
 \usepackage{cleveref}
 \hypersetup{hypertexnames = false, bookmarksdepth = 2, bookmarksopen = true, colorlinks, linkcolor = black, citecolor = black, urlcolor = black, pdfstartview={XYZ null null 1}}
-
-% Citation 
-%\usepackage{harvard}
-\usepackage[backend=biber, maxbibnames=99, datamodel=mrnumber]{biblatex}
 
 % Graphics
 \usepackage{graphicx}
@@ -51,5 +54,3 @@
 
 % Todos and Misc
 \usepackage[colorinlistoftodos, textsize = footnotesize]{todonotes}
-
-%\usepackage{gitinfo2}
