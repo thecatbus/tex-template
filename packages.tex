@@ -1,8 +1,17 @@
+% Miscellaneous
+\usepackage{lipsum}
+
 % Typesetting
-\usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[a4paper, total={6.5in, 10in}]{geometry}
 \usepackage{microtype}
 \usepackage[parfill]{parskip}
 \frenchspacing
+
+% Title, Content, and Authors 
+\usepackage{titlesec}
+\usepackage[affil-sl]{authblk}
+\usepackage{tocloft}
+\usepackage[runin]{abstract}
 
 % Fonts
 \usepackage[T1]{fontenc}
@@ -37,7 +46,7 @@
 
 % Citation 
 \usepackage[backend=biber, 
-            style=authoryear-comp,
+            style=alphabetic,
             hyperref=auto, 
             backref=true,
             maxbibnames=99]{biblatex}
@@ -51,9 +60,12 @@
 \usepackage{graphicx}
 \usepackage{tikz}
 \usepackage{tikz-cd}
+\usepackage{dynkin-diagrams}
 \usepackage{pgfmath}
 \usepackage{pgfcalendar}
 \usepackage{pgfplots}
+
+\pgfplotsset{compat=1.18}
 
 % Todos and Misc
 \usepackage[colorinlistoftodos, textsize = footnotesize]{todonotes}

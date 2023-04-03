@@ -1,8 +1,8 @@
-% mathematics configuration
+% Mathematics configuration
 \relpenalty=10000
 \binoppenalty=10000
 
-% todonotes configuration
+% Todonotes configuration
 \newcounter{todocounter}
 \DeclareDocumentCommand\addreference{g}{\stepcounter{todocounter}\todo[color = blue!30]{\thetodocounter. Add reference\IfNoValueF{#1}{: #1}}\xspace}
 \DeclareDocumentCommand\checkthis{g}{\stepcounter{todocounter}\todo[color = red!50]{\thetodocounter. Check this\IfNoValueF{#1}{: #1}}\xspace}
@@ -10,19 +10,32 @@
 \DeclareDocumentCommand\expand{g}{\stepcounter{todocounter}\todo[color = green!50]{\thetodocounter. Expand\IfNoValueF{#1}{: #1}}\xspace}
 \newcommand\removethis{\stepcounter{todocounter}\todo[color=yellow!50]{\thetodocounter. Remove this?}}
 
-% environments
-\declaretheoremstyle[
-  spaceabove = 3pt,
-  spacebelow = 3pt,
-]{lecture}
-\theoremstyle{lecture}
+% Environments
+%\declaretheoremstyle[
+%  spaceabove = 3pt,
+%  spacebelow = 3pt,
+%]{lecture}
+\theoremstyle{plain}
 \newtheorem{theorem}{Theorem}
 \newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{exercise}[theorem]{Exercise}
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
 \theoremstyle{remark}
-\newtheorem*{remark}{Remark}
+\newtheorem{remark}[theorem]{Remark}
+
+% Section headings
+\titleformat{\section}{\normalfont\bfseries\Large\centering}{\thesection.}{1em}{}
+\titleformat{\subsubsection}[runin]{\normalfont\normalsize\bfseries}{}{0em}{}[.]
+
+% Table of contents
+\renewcommand\contentsname{}
+\renewcommand\cftsecfont{}
+\renewcommand\cftsecpagefont{}
+\setlength\cftbeforesecskip{3pt}
+\setcounter{tocdepth}{2}
